@@ -18,7 +18,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "umbrella", accessibilityDescription: "to-you timer")
+            button.image = NSImage(systemSymbolName: "umbrella", accessibilityDescription: "tu-yu timer")
             button.image?.isTemplate = true
             button.action = #selector(togglePopover(_:))
             button.target = self
@@ -129,7 +129,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         button.font = .monospacedDigitSystemFont(ofSize: 13, weight: .medium)
         button.title = model.formatted(secondsLeft) + (isPaused ? " ⏸" : "")
         if expanded {
-            button.image = NSImage(systemSymbolName: "umbrella.fill", accessibilityDescription: "to-you timer")
+            button.image = NSImage(systemSymbolName: "umbrella.fill", accessibilityDescription: "tu-yu timer")
             button.image?.isTemplate = true
             button.imagePosition = .imageLeft
         } else {
@@ -143,7 +143,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.isVisible = true
         button.font = nil
         button.title = ""
-        if let img = NSImage(systemSymbolName: "umbrella", accessibilityDescription: "to-you timer") {
+        if let img = NSImage(systemSymbolName: "umbrella", accessibilityDescription: "tu-yu timer") {
             img.isTemplate = true
             button.image = img
             button.imagePosition = .imageOnly

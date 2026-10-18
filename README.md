@@ -1,4 +1,6 @@
-# to-you
+# tu-yu
+
+[Download on the Mac App Store](https://apps.apple.com/us/app/id6812644110?mt=12) · free · macOS 14+
 
 ```
                                                   
@@ -30,7 +32,9 @@
                                                   
 ```
 
-a productivity timer tool brought to-you by [oliver pearce](https://github.com/oliverpearce) c:
+a productivity timer tool brought tu-yu by [oliver pearce](https://github.com/oliverpearce) c:
+
+*(formerly to-you — the project folders below keep the original name)*
 
 # Project structure
 

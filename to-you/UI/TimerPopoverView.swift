@@ -356,9 +356,10 @@ struct TimerPopoverView: View {
                 toggleHUD()
             }
             Divider()
-            Button("About to-you.") {
+            Button("About tu-yu.") {
                 NSApp.activate(ignoringOtherApps: true)
-                NSApp.orderFrontStandardAboutPanel(nil)
+                // CFBundleName is still "to-you" (target name), so override the panel title
+                NSApp.orderFrontStandardAboutPanel(options: [.applicationName: "tu-yu"])
             }
             Button("Quit") { NSApp.terminate(nil) }
         } label: {

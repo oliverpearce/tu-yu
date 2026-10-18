@@ -201,7 +201,7 @@ struct SettingsView: View {
                                     launchAtLogin = !enabled
                                 }
                             }
-                        InfoTipButton("Starts to-you. automatically when you log in.")
+                        InfoTipButton("Starts tu-yu. automatically when you log in.")
                     }
                     Spacer()
                     HStack(spacing: 4) {
@@ -217,7 +217,7 @@ struct SettingsView: View {
             section {
                 HStack {
                     Spacer()
-                    Button("Quit to-you") { NSApplication.shared.terminate(nil) }
+                    Button("Quit tu-yu") { NSApplication.shared.terminate(nil) }
                         .buttonStyle(.bordered)
                     Spacer()
                 }

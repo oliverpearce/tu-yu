@@ -27,6 +27,9 @@ xcuserdata/
 # Local planning docs
 APP_STORE_SUBMISSION.md
 
+# App Store screenshots / review videos (local only)
+appstore-to-you/
+
 # Credentials / secrets
 *.pem
 *.p12
