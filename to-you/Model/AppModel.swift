@@ -248,6 +248,20 @@ final class AppModel: ObservableObject {
     }
 }
 
+#if DEBUG
+extension AppModel {
+    /// Screenshot mode only: show a fixed time without starting the engine, so the UI holds still.
+    func debugFreeze(total: Int, left: Int, running: Bool) {
+        totalSeconds = total
+        secondsLeft = left
+        isRunning = running
+        isPaused = false
+        isFinished = false
+        isBreakTimer = false
+    }
+}
+#endif
+
 private extension Int {
     func nonZeroOrDefault(_ d: Int) -> Int {
         (self == 0) ? d : self

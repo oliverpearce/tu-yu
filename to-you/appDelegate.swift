@@ -14,8 +14,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var bag = Set<AnyCancellable>()
     private var alarmSound: NSSound?
     private var clickOutsideMonitor: Any?
+    #if DEBUG
+    private var screenshotStage: ScreenshotStageController?
+    #endif
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        #if DEBUG
+        // `-screenshotScene <name>` stages one App Store screenshot instead of running normally.
+        if let raw = UserDefaults.standard.string(forKey: "screenshotScene"),
+           let scene = ScreenshotScene(rawValue: raw) {
+            let stage = ScreenshotStageController()
+            stage.present(scene: scene, model: model)
+            screenshotStage = stage
+            return
+        }
+        #endif
+
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: "umbrella", accessibilityDescription: "tu-yu timer")
